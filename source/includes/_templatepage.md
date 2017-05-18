@@ -1,7 +1,5 @@
 # CB Online Custom template page
 
-> CB Online Custom template page
-
 Citybreak Online enables customization by offering the possibility to include a template page for header and footer. The template page is provided by setting an absolute URL to an HTML page containing a placeholder element where the Citybreak Online booking engine will be injected. This gives the user ability to use their own header and footer as well as other static resources such as style sheets and JavaScripts. 
 
 **A responsive template page is strongly recommended as of 2016-06-01.**
@@ -48,7 +46,6 @@ If a form tag is encountered in the header/footer include document that has a ch
 If a hidden input field with the name attribute set to *‘__VIEWSTATE’* is encountered, it will be replaced with a comment stating the field was removed. If you are using .NET WebForms a form tag will most likely wrap the entire page. That form element will be removed (since it wraps all elements of the page, and we want to make sure that we don’t pass too much unnecessary data back and forth from the client to the server).
 
 #### Citybreak Online content div
-The Citybreak Online will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to *‘cb_init_bookingengine’*  where you would like the Online content to be injected.
 
 ```html
 <div id="cb_init_bookingengine"> 
@@ -56,14 +53,17 @@ The Citybreak Online will download the file, parse it, modify it as necessary an
 </div>
 ```
 
+The Citybreak Online will download the file, parse it, modify it as necessary and split the content in two parts: one header and one footer. You should define a div tag with the id attribute set to *‘cb_init_bookingengine’*  where you would like the Online content to be injected.
+
 Everything within this div element will be ignored and replaced by the Online content. In this case will the h1 tag be ignored and the specific requested Online page will be inserted there instead. If this tag is omitted the header/footer has no meaning in the context of Online and will be dealt with according to section Error reporting.
 
 #### Change language
-If the online guide implements more than one language, a change language control can be included into the header/footer document. Just include a span tag where you wish to insert the language change controls.
 
 ```html
 <span id="cb_replace_languages_select"></span> 
 ```
+
+If the online guide implements more than one language, a change language control can be included into the header/footer document. Just include a span tag where you wish to insert the language change controls.
 
 The id attribute must be the specific *‘cb_replace_languages_select’*. Everything in the span will be ignored and replaced with a form element which has some hidden fields as well as select box with available languages and an input type submit control. This will enable the user to change language and still end up at the same page as currently is viewed.
 
@@ -85,11 +85,12 @@ If no meta description tag is defined on the page, Online will create one and ap
 If meta refresh is defined on the include page, it will be removed. In rare cases Citybreak Online will define a refresh tag.
 
 #### Meta content charset
-Online will remove all elements that define meta http-equiv and replace it with the following: 
 
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
+
+Online will remove all elements that define meta http-equiv and replace it with the following: 
 
 #### Robots
 If meta tags to hint robots are encountered they are preserved, except for pages that Citybreak Online defines as local. Those pages will be tagged as noindex, nofollow.
@@ -121,4 +122,3 @@ When using custom fonts in the header/footer template, access must be granted fo
 
 #### jQuery
 Citybreak Online uses the jQuery JavaScript library. The specific jQuery handle is called ‘citybreakjq’ and should never be interfered with.
-

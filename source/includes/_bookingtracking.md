@@ -1,7 +1,5 @@
 # CB Online Tracking
 
-> CB Online Tracking
-
 ## Booking Tracking
 
 The reservation tracking feature is a simple way for a client to track whether or not certain reservations were referred to by a tracking key.
@@ -37,6 +35,12 @@ Within these reports there's a column which represents which tracking key was us
 
 ## Custom Conversion Tracking 
 
+> Example
+
+```html
+<script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
+```
+
 To make your script work for your organization you need to configure it. To do so you need to change the variables in your script with the variable names below. 
 
 {bookingcode} = Booking number, e.g. ABCD12
@@ -53,12 +57,6 @@ Example of {bookingJSONObject} usage:
 var booking = {bookingJSONObject};
 Will generate:
 var booking = { "BookingCode": "STRW85", "City": "asd", "Country": "SE", "State": "asd", "TotalAmount": 600.0, "TotalTax": 64.29, "Products": [{ "Id": 248466, "Name": "Testhotell/Enkelrum test", "Category": "Accommodation/Hotelroom", "Price": 600.0, "Quantity": 1, "Start": new Date(1355698800000), "End": new Date(1355785200000), "SubProducts": [] }] }; 
-
-
-Example:
-```html
-<script type="text/javascript" src="//citybreak.com/?value={bookingvalue}&cur={currency}&order={bookingcode}&rand={randomnumber}"></script>
-```
 
 
 ## Google Tracking

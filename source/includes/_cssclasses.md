@@ -1,7 +1,5 @@
 # CB Online BodyCssClasses
 
-> CB Online BodyCssClasses
-
 Citybreak Online inserts some CSS classes into the class attribute of the Body element based on what section of Citybreak Online is active. This enables you to do special styling based on the currently active section, and these values are also accessible from javascript. It also inserts the currently active language. 
 The body tag always has a class of *cb_citybreak_body* when Citybreak Online is active.
 
