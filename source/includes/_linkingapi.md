@@ -14,6 +14,28 @@ To be able to determine the link to a dynamic page irregardless of its language,
 
 ### Query Parameters
 
+> JSON
+
+```json
+{
+Url: "http://www2.visittheuniverse.com/en/accommodation/a55221/planet-earth-hotel/details",
+Name: "Planet Earth Hotel",
+Id: 55221
+}
+```
+
+> XML
+
+```xml
+<ProductUrl xmlns="http://schemas.datacontract.org/2004/07/Online3.ViewModels.ProductLink" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<Id>55221</Id>
+<Name>Planet Earth Hotel</Name>
+<Url>
+http://www2.visittheuniverse.com/en/accommodation/a55221/planet-earth-hotel/details
+</Url>
+</ProductUrl>
+```
+
 Parameter | Description
 --------- | -----------
 ONLINE-HOST | the subdomain linked to Visit
@@ -24,28 +46,6 @@ FORMAT | string, json or xml
 <aside class="notice">
 If no format is provided, the response of the query will be a redirect to the product-page.
 </aside>
-
-> Example of response:
-
-JSON
-```json
-{
-Url: "http://www2.visittheuniverse.com/en/accommodation/a55221/planet-earth-hotel/details",
-Name: "Planet Earth Hotel",
-Id: 55221
-}
-```
-
-XML
-```xml
-<ProductUrl xmlns="http://schemas.datacontract.org/2004/07/Online3.ViewModels.ProductLink" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-<Id>55221</Id>
-<Name>Planet Earth Hotel</Name>
-<Url>
-http://www2.visittheuniverse.com/en/accommodation/a55221/planet-earth-hotel/details
-</Url>
-</ProductUrl>
-```
 
 ## Get a supplier package
 
