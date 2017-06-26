@@ -1,7 +1,10 @@
+---
+---
 @charset "utf-8";
 @import 'normalize';
 @import 'variables';
 @import 'icon-font';
+@import 'syntax';
 
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
@@ -616,6 +619,10 @@ html, body {
   %right-col + %left-col {
     margin-top: $main-padding;
   }
+}
+
+.content > .highlighter-rouge {
+  clear: none;
 }
 
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
